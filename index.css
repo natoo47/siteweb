@@ -29,7 +29,7 @@ body {
 .header {
     padding-left: 30px;
     padding-right: 30px;
-    border: white ;
+    border: white;
     position: sticky;
     background-color: white;
     border-bottom-width: 10px;
@@ -39,10 +39,6 @@ body {
     align-items: center;
     height: 90px;
     font-size: 20px;
-
-    
-
-    
 }
 
 header {
@@ -54,17 +50,15 @@ header {
 }
 
 #bouton_pro {
-    display: flex;
-    margin-left: auto;
     background-color: gold;
     border-radius: 10px;
     color: white;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 5px 15px;
     font-family: 'Britannic Bold';
-    font-size: 35px;
+    font-size: 20px;
     border: solid gold;
     text-align: center;
+    margin-left: 20px; /* Ajoute un espace entre les liens et le bouton */
 }
 
 #bouton_pro:hover {
