@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(180, 180, 180, 0.809);
+    background: linear-gradient(to right, #e9e0ded5, #858585);
     background-repeat: no-repeat;
     background-size: cover;
     font-size: large;
@@ -54,7 +54,50 @@ header {
     border-bottom-width: 30px;
 }
 
+.help-container {
+    position: relative;
+    display: inline-block;
+}
 
+#help-button {
+    color: gray;
+    font-size: 20px;
+    transition: transform 0.2s ease;
+}
+
+.help-info {
+    font-size: 25px;
+    margin: 15px;
+    display: none;
+    position: absolute;
+    top: 40px; /* Place le bloc au-dessus ou en dessous du bouton */
+    left: 0;
+    background-color: #a09696e0;
+    padding: 10px;
+    border-radius: 5px;
+    /*width: 200px;
+    height: 200px; au cas ou ca devient trop petit*/
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.help-container:hover .help-info {
+    display: block;
+}
+
+.help-info p {
+    margin: 5px 0;
+    
+}
+
+.help_underlinedd {
+    transition: 0.2s ease;
+}
+
+.help_underlinedd:hover {
+    color: rgb(62, 57, 73);
+}
 
 #bouton_pro {
     background-color: gold;
@@ -67,19 +110,26 @@ header {
     text-align: center;
     transition: 0.2s ease;
     margin-left: 20px; /* Ajoute un espace entre les liens et le bouton */
+    display: inline-block;
 }
 
 #bouton_pro:hover {
     background-color: white;
     color: gold;
-    transform: scale(1.1);
+    transform: scale(1.3);
 }
 
 #logo-cheval {
-    display: flex;
+    display: flex; 
     width: 70px;
     margin: 5px;
+    transition: transform 0.3s ease;
     
+    
+}
+
+#logo-cheval:hover {
+    transform: rotate(360deg);
 }
 
 /* Styles généraux */
@@ -113,11 +163,13 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     font-family: Arial, Helvetica, 'Bold';
+    
 }
 
 
 
 .liens_header:hover {
+    cursor: pointer;
     color: gray;
 }
 
@@ -126,6 +178,7 @@ header {
 }
 
 h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     background-color: brown;
     font-family: 'Britannic Bold';
     color: #ffbf00e3;
@@ -169,6 +222,13 @@ img {
    
 }
 
+.img_chevaux {
+    transition: 0.2s ease;
+}
+
+.img_chevaux:hover {
+    transform: scale(1.1);
+}
 
 .img {
     width: 100%;
@@ -205,9 +265,24 @@ img {
 
 
 a {
+    position: relative;
+    color: #333;
     text-decoration: none;
+}
 
+a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #3498db;
+    left: 0;
+    bottom: -2px;
+    transition: width 0.3s;
+}
 
+a:hover::after {
+    width: 100%;
 }
 
 .footer_underline {
