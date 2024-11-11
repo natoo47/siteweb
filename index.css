@@ -260,6 +260,13 @@ img {
     transition: transform 0.2s ease;
 }
 
+#video_et_map {
+    transition: 2s ease;
+}
+
+#video_et_map:hover {
+    transform: scale(1.1);
+}
 #abonnetoi:hover {
     border: solid red;
     background-color: white;
