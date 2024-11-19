@@ -44,24 +44,23 @@ body {
 .header {
     padding-left: 30px;
     padding-right: 30px;
-    border: white;
+    border: solid rgb(48, 46, 46);
+    border-width: 0px 0px 1px 0px;
     position: sticky;
     background-color: white;
-    border-bottom-width: 10px;
-    border-bottom: gray;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 90px;
     font-size: 20px;
+
 }
 
 header {
     position: sticky;
     display: block;
     top: 1px;
-    border-bottom-color: gray;
-    border-bottom-width: 30px;
+    
 }
 
 .help-container {
@@ -70,6 +69,7 @@ header {
 }
 
 #help-button {
+    transition: 0.2s ease;
     color: gray;
     font-size: 20px;
     
@@ -101,6 +101,7 @@ header {
 
 .help_underlinedd {
     transition: 0.2s ease;
+    cursor: pointer;
 }
 
 .help_underlinedd:hover {
@@ -140,6 +141,30 @@ header {
     transform: rotate(360deg);
 }
 
+/* truc pour chercehr se qu'on veut */
+
+[contenteditable="true"]:focus {
+    outline: none; /* Supprime l'encadrement */
+    border: none;  /* Optionnel, si un bord par défaut apparaît */
+}
+
+#chercher {
+    display: flex;
+    position: relative;
+    left: 40%;
+    height: 50px;
+    width: 270px;
+    padding: 0px 10px;
+    color: gray;
+    border: solid rgb(54, 54, 54);
+    border-width: 1px;
+    border-radius: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+    gap: 10px;
+
+}
+
 /* Styles généraux */
 .hamburger-menu {
     display: flex;
@@ -171,6 +196,7 @@ header {
     margin-left: 10px;
     margin-right: 10px;
     font-family: Arial, Helvetica, 'Bold';
+    transition: 0.2s ease;
     
 }
 
@@ -179,6 +205,7 @@ header {
 .liens_header:hover {
     cursor: pointer;
     color: gray;
+    transform: rotate3d(0, 1, 0, 20deg);
 }
 
 .marge {
@@ -235,9 +262,25 @@ img {
 }
 
 .img_chevaux:hover {
-    transform: scale(1.1);
+    transform: scale(1.5);
 }
 
+.chevaux_bancale1 {
+    transform: rotate(10deg);
+}
+.chevaux_bancale1:hover {
+    transform: rotate(0deg);
+}
+
+.chevaux_bancale2{
+    transform: rotate(-10deg);
+}
+.chevaux_bancale2:hover {
+    transform: rotate(0deg);
+}
+.img_chevaux:hover {
+    transform: scale(1.2);
+}
 .img {
     width: 100%;
     height: 240px;
@@ -271,6 +314,15 @@ img {
 
 }
 
+#mon_nom {
+    display: flex;
+    padding-right: 10px;
+    justify-content: end;
+    font-size: 15px;
+    color: white;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+}
 
 a {
     
@@ -279,11 +331,12 @@ a {
 }
 
 
+
 .footer_underline {
     color: rgba(88, 91, 231, 0.808);
 }
 .footer_underline:hover {
-    color: violet;
+    color: rgb(155, 155, 155);
 }
 footer {
     padding: 20px;
@@ -291,9 +344,10 @@ footer {
     background-color: black;
     font-family: "Britannic Bold";
     font-size: 18px;
-    color: white;
+    color: rgb(155, 155, 155);
     text-align: left;
-    padding-bottom: 200px;
-
+    padding: 20px 100px 25px 200px;
+    display: flex;
+    flex-direction: column;
 
 }
