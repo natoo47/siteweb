@@ -6,6 +6,29 @@ body {
     margin: 0px;
 }
 
+/* Personnalise la barre de défilement entière */
+::-webkit-scrollbar {
+    width: 20px; /* Largeur verticale */
+    height: 10px; /* Hauteur horizontale */
+}
+
+/* Personnalise la zone cliquable (le fond de la scrollbar) */
+::-webkit-scrollbar-track {
+    
+    background: linear-gradient(to bottom, rgb(54, 53, 53), rgb(151, 151, 151)); /* Couleur du fond */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Personnalise le curseur (le "thumb") */
+::-webkit-scrollbar-thumb {
+    background: #b7deff; /* Couleur du curseur */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Changement de couleur au survol */
+::-webkit-scrollbar-thumb:hover {
+    background: #a19b9b; /* Couleur au survol */
+}
 
 
 #cookie {
@@ -235,14 +258,31 @@ nav {
     text-align: left;
     font-size: 16px;
     font-family: Forte;
+    transition: 0.2s ease;
 
-
+}
+nav:hover {
+    transform: scale(1.1, 1);
 }
 
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*animation-duration: 3s;
+    animation-name: slide-in; */
 }
-
+    
+  
+/* @keyframes slide-in {
+from {
+    translate: 150vw 0;
+    scale: 200% 1;
+}
+  
+to {
+  translate: 0 0;
+  scale: 100% 1;
+}
+}  ps: pas encore sur*/
 img {
     border-radius: 20px;
     width: 100%;
