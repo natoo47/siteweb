@@ -30,14 +30,24 @@ body {
     background: #a19b9b; /* Couleur au survol */
 }
 
+@keyframes apparitioncookie {
+    0% {
+        transform: translatey(100px);
+    }
+
+    100% {
+        transform: translatey(0);
+    }
+}
 
 #cookie {
+    bottom: 0px;
+    transform: translateX(-50%) translateY(100px);
+    animation: apparitioncookie 5s ease 1 forwards;
     position: fixed;
     border-radius: 20px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px 0px;
+    left: 30%;
+    width: 500px;
     height: 50px;
     padding: 10px 30px;
     background-color: white;
@@ -63,6 +73,37 @@ body {
     color: white;
 }
 
+@keyframes sauter {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-200px) rotate(360deg);
+    }
+
+    60% {
+        transform: rotate(180deg);
+
+    }
+    70% {
+        transform: rotate(180deg);
+
+    }
+
+    100% {
+        transform: translatey(0px) ;
+    }
+}
+
+#logo_qui_saute {
+    cursor: pointer;
+    position:fixed;
+    bottom: 10px;
+    left: 5px;
+    width: 60px;
+    animation: sauter 5s ease-out 2;
+}
 
 .header {
     padding-left: 30px;
@@ -76,6 +117,8 @@ body {
     align-items: center;
     height: 90px;
     font-size: 20px;
+    z-index: 100000;
+    
 
 }
 
