@@ -1,5 +1,7 @@
+
+
 body {
-    background: linear-gradient(to right, #e9e0ded5, #858585);
+    background: linear-gradient(to right, #e9e0ded5, #888888);
     background-repeat: no-repeat;
     background-size: cover;
     font-size: large;
@@ -40,7 +42,7 @@ body {
     }
 }
 
-#cookie {
+/* #cookie {
     bottom: 0px;
     transform: translateX(-50%) translateY(100px);
     animation: apparitioncookie 5s ease 1 forwards;
@@ -55,12 +57,45 @@ body {
     font-size: 15px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, Bold;
     display: flex;
-    align-items: flex-start; /* Aligne le contenu vers le haut */
-    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: flex-start;  Aligne le contenu vers le haut 
+    justify-content: center; /* Centre le contenu horizontalement 
     z-index: 1000;
-    overflow: hidden; /* Cache tout débordement */
+    overflow: hidden; /* Cache tout débordement 
     transition: 0.2s ease;
+} 
+*/
+
+#cookie {
+    left: -470px;
+    bottom: 100px;
+    position: fixed;
+    border-radius: 20px;
+    width: 500px;
+    height: 50px;
+    padding: 10px 0px 10px 30px;
+    background-color: white;
+    border: solid gray 1px;
+    font-size: 15px;
+    
 }
+
+@keyframes cookie_survol {
+    0% {transform: translatex(0);}
+    100% {transform: translateX(460px);}
+}
+
+@keyframes cookie_pas_survol {
+    0% {transform: translatex(460px);}
+    100% {transform: translateX(0);}
+}
+#cookie:hover {
+    animation: cookie_survol ease 0.5s forwards;
+}
+
+#cookie:not(:hover) {
+    animation: cookie_pas_survol ease 1s forwards;
+}
+
 #cookie p {
     margin: 0;
     display: flex;
@@ -102,10 +137,16 @@ body {
     bottom: 10px;
     left: 5px;
     width: 60px;
-    animation: sauter 5s ease-out 2;
+    animation: sauter 4s ease-out 1;
+}
+
+@keyframes header_qui_dessens {
+    0% {transform: translatey(-100px);}
+    100% {transform: translatey(0);}
 }
 
 .header {
+    animation: header_qui_dessens 5s ease 1 forwards;
     padding-left: 30px;
     padding-right: 30px;
     border: solid rgb(48, 46, 46);
@@ -126,6 +167,7 @@ header {
     position: sticky;
     display: block;
     top: 1px;
+    z-index: 10000;
     
 }
 
@@ -193,6 +235,33 @@ header {
     color: gold;
     transform: scale(1.3);
 }
+
+@keyframes fleche_de_cheval_pro {
+    0% {transform: translatex(0);}
+    50% {transform: translatex(50px);}
+    100% {transform: translatex(0);}
+}
+
+@keyframes fleche_de_cheval_pro_disparition {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden; /* Cache complètement après l'animation */
+    }
+}
+
+#fleche_sur_cheval_pro {
+    position: fixed;
+    width: 50px;
+    left: 450px;
+    animation: fleche_de_cheval_pro 3s ease-in-out 5, fleche_de_cheval_pro_disparition 3s ease 7s forwards;
+   
+
+}
+
+
 
 #logo-cheval {
     display: flex; 
@@ -337,11 +406,13 @@ img {
     align-items: center;
     justify-content: row;
     gap: 20px;
+    z-index: 1;
    
 }
 
 .img_chevaux {
     transition: 0.2s ease;
+    z-index: 1;
 }
 
 .img_chevaux:hover {
@@ -350,6 +421,7 @@ img {
 
 .chevaux_bancale1 {
     transform: rotate(10deg);
+    z-index: 1;
 }
 .chevaux_bancale1:hover {
     transform: rotate(0deg);
