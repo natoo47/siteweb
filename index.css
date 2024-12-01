@@ -1,7 +1,7 @@
 
 
 body {
-    background: linear-gradient(to right, #e9e0ded5, #888888);
+    background: linear-gradient(to right, #e9e0ded5, #ebebeb);
     background-repeat: no-repeat;
     background-size: cover;
     font-size: large;
@@ -12,14 +12,14 @@ body {
 
 /* Personnalise la barre de défilement entière */
 ::-webkit-scrollbar {
-    width: 20px; /* Largeur verticale */
+    width: 10px; /* Largeur verticale */
     height: 10px; /* Hauteur horizontale */
 }
 
 /* Personnalise la zone cliquable (le fond de la scrollbar) */
 ::-webkit-scrollbar-track {
     
-    background: linear-gradient(to bottom, rgb(54, 53, 53), rgb(151, 151, 151)); /* Couleur du fond */
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(190, 176, 176)); /* Couleur du fond */
     border-radius: 10px; /* Coins arrondis */
 }
 
@@ -401,7 +401,7 @@ img {
     justify-content: row;
     gap: 20px;
     z-index: 1;
-   
+    right: 10px;
 }
 
 .img_chevaux {
