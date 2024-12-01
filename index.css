@@ -8,6 +8,8 @@ body {
     margin: 0px;
 }
 
+
+
 /* Personnalise la barre de défilement entière */
 ::-webkit-scrollbar {
     width: 20px; /* Largeur verticale */
@@ -44,6 +46,7 @@ body {
 
 
 #cookie {
+    display: block;
     left: -470px;
     bottom: 100px;
     position: fixed;
@@ -55,9 +58,14 @@ body {
     border: solid gray 1px;
     font-size: 15px;
     z-index: 100000;
-    
+}
+.hidden {
+    display: none;
 }
 
+#croix_cookie {
+    background-color: blue;
+}
 @keyframes cookie_survol {
     0% {transform: translatex(0);}
     100% {transform: translateX(460px);}
@@ -257,10 +265,6 @@ header {
 
 /* truc pour chercehr se qu'on veut */
 
-[contenteditable="true"]:focus {
-    outline: none; /* Supprime l'encadrement */
-    border: none;  /* Optionnel, si un bord par défaut apparaît */
-}
 
 #chercher {
     display: flex;
@@ -277,6 +281,17 @@ header {
     font-size: 15px;
     gap: 10px;
 
+}
+
+#separator {
+    width: 2px;
+    background-color: #333;
+    height: 100%;
+}
+
+input {
+    border: none;
+    outline: none;
 }
 
 /* Styles généraux */
