@@ -55,7 +55,8 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <p contenteditable="true">cherchez ce qu'il vous faut !</p>
+                    <div id="separator"></div>
+                    <input type="search" style="text-decoration: none;" maxlength="20" placeholder="cherchez ce qu'il vous faut !">
                 </div>
         
                 <!-- Menu Hamburger -->
@@ -69,14 +70,23 @@
         
             
         </header>
-        <div id="cookie">
-            <p >
-                <img style="width: 15px; cursor: pointer;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzom5Sr4U0YIkd3qRVrWVGJXYSE0aFSuQM8w&s" alt="c'etait une belle croix">
-                les cookies sont des petits fichiers textes qui peuvent être utilisés par les sites web pour rendre l'expérience utilisateur plus efficace.
-                <img style="transform: scale(1.4); width:50px;" src="https://png.pngitem.com/pimgs/s/74-741994_cookie-clipart-cookie-monster-cookie-clipart-hd-png.png" style="width: 50px;"  alt="cookie">
+        <div id="cookie" class="croix_cookie">
+            <p>
+                <img style="width: 15px; cursor: pointer;" onclick="hideBlock()" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzom5Sr4U0YIkd3qRVrWVGJXYSE0aFSuQM8w&s" alt="c'etait une belle croix">
+                Les cookies sont des petits fichiers textes qui peuvent être utilisés par les sites web pour rendre l'expérience utilisateur plus efficace.
+                <img style="transform: scale(1.4); width:50px;" src="https://png.pngitem.com/pimgs/s/74-741994_cookie-clipart-cookie-monster-cookie-clipart-hd-png.png" alt="cookie">
             </p>
         </div>
-
+        
+        <script>
+            function hideBlock() {
+                // Sélectionner le bloc à cacher
+                var block = document.getElementById('cookie');
+                // Cacher le bloc en changeant son style display à "none"
+                block.style.display = 'none';
+            }
+        </script>
+        
         <div id="saut">
             <img id="logo_qui_saute" src="https://images.vexels.com/content/142789/preview/multicolor-swirls-circle-logo-41322f.png" alt="logo caca">
         </div>
@@ -133,6 +143,26 @@
         <h3> si vous avez des chevaux vous pouvez nous contacter par :</h3>
         <li ><a href="tel:3113" class="footer_underline hover-underline">téléphone</a></li>
         <li ><a href="mailto:gerardlecheval@gmail.com" class="footer_underline hover-underline">mail</a></li>
+
+        <h3>s'enregistrer pour devenir un cheval</h3>
+        <div style="height:10%;">
+            <form >
+            <label for="name">Nom :</label>
+            <input type="text" minlength="3" style="border-radius: 5px;" id="name" name="name" placeholder="Votre nom" required><br><br>
+        
+            <label for="email">Email :</label>
+            <input type="email" style="border-radius: 5px;" id="email" name="email" placeholder="Votre email"><br><br>
+        
+            <label for="dob">Date de naissance :</label>
+            <input type="date" style="border-radius: 5px;" id="dob" name="dob"><br><br>
+        
+            <label  for="password">Mot de passe :</label>
+            <input type="password" style="border-radius: 5px;" id="password" name="password" required><br><br>
+
+            <input type="submit" style="cursor: pointer; border-radius: 5px;" value="envoyer">
+            </form>
+        </div>
+        
         </footer>
 
         
